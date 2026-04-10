@@ -1,0 +1,103 @@
+/* Styles for update_profile.php page */
+
+.edit-profile-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.edit-profile-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-form .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-form .form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.profile-form .form-group input[type="text"],
+.profile-form .form-group input[type="email"],
+.profile-form .form-group input[type="password"],
+.profile-form .form-group select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.image-group .image-preview {
+    margin-bottom: 8px;
+}
+.image-group .image-preview img {
+    max-width: 120px;
+    border-radius: 50%;
+    display: block;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form-buttons .btn-dark,
+.form-buttons .btn-outline {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-buttons .btn-dark {
+    background-color: #000;
+    color: #fff;
+}
+
+.form-buttons .btn-outline {
+    background: transparent;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.alert {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.alert.error {
+    background-color: #fdd;
+    color: #900;
+}
+
+.alert.success {
+    background-color: #dfd;
+    color: #090;
+}
+
+/* responsive adjustments */
+@media (max-width: 600px) {
+    .edit-profile-container {
+        margin: 20px;
+        padding: 15px;
+    }
+    .form-buttons {
+        flex-direction: column;
+    }
+    .form-buttons .btn-dark,
+    .form-buttons .btn-outline {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,330 @@
+/* ============================================
+   WISHLIST PAGE - CUSTOM STYLES
+   BMW Luxury Theme - White & Black
+   ============================================ */
+
+:root {
+    --color-white-bg: #FFFFFF;
+    --color-light-gray: #F5F5F5;
+    --color-light-gray-2: #EEEEEE;
+    --color-bmw-blue: #0066B1;
+    --color-electric-blue: #1C69D4;
+    --color-sky-blue: #00A8E8;
+    --color-black: #000000;
+    --color-dark-text: #1A1A1A;
+    --color-medium-gray: #666666;
+}
+
+body {
+    background-color: var(--color-white-bg);
+    color: var(--color-black);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============================================
+   WISHLIST HEADER SECTION
+   ============================================ */
+
+.wishlist-header {
+    padding: 80px 40px;
+    background: linear-gradient(135deg, var(--color-white-bg) 0%, var(--color-light-gray-2) 100%);
+    border-bottom: 2px solid var(--color-electric-blue);
+    box-shadow: 0 10px 30px rgba(28, 105, 212, 0.1);
+    text-align: center;
+}
+
+.wishlist-header h1 {
+    font-size: clamp(28px, 8vw, 48px);
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--color-black);
+    letter-spacing: -1px;
+}
+
+.wishlist-header p {
+    font-size: 16px;
+    color: var(--color-medium-gray);
+    line-height: 1.6;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-outline,
+.btn-primary {
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-electric-blue), var(--color-bmw-blue));
+    color: white;
+    box-shadow: 0 6px 20px rgba(28, 105, 212, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(28, 105, 212, 0.5);
+    background: linear-gradient(135deg, var(--color-sky-blue), var(--color-electric-blue));
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-electric-blue);
+    border: 2px solid var(--color-electric-blue);
+}
+
+.btn-outline:hover {
+    background-color: rgba(28, 105, 212, 0.1);
+    border-color: var(--color-sky-blue);
+    color: var(--color-sky-blue);
+}
+
+.tags {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    padding: 8px 16px;
+    background: rgba(28, 105, 212, 0.1);
+    color: var(--color-electric-blue);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================
+   WISHLIST CONTAINER & GRID
+   ============================================ */
+
+.wishlist-container {
+    padding: 60px 40px;
+}
+
+.wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wishlist-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(28, 105, 212, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.wishlist-card:hover {
+    transform: translateY(-8px);
+    border: 1px solid rgba(28, 105, 212, 0.5);
+    box-shadow: 0 12px 30px rgba(28, 105, 212, 0.15);
+}
+
+.wishlist-card .card-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.wishlist-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.wishlist-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.wishlist-card .tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, var(--color-electric-blue), var(--color-bmw-blue));
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.wishlist-card .card-details {
+    padding: 20px;
+}
+
+.wishlist-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: 12px;
+}
+
+.wishlist-card .price {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-electric-blue);
+    margin-bottom: 12px;
+    display: block;
+}
+
+.wishlist-card .specs {
+    font-size: 14px;
+    color: var(--color-medium-gray);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.wishlist-card .specs span {
+    display: inline;
+}
+
+.wishlist-card .card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.wishlist-card .btn-cart,
+.wishlist-card .btn-remove {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.wishlist-card .btn-cart {
+    background: linear-gradient(135deg, var(--color-electric-blue), var(--color-bmw-blue));
+    color: white;
+}
+
+.wishlist-card .btn-cart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(28, 105, 212, 0.3);
+}
+
+.wishlist-card .btn-remove {
+    background-color: #FFE5E5;
+    color: #D32F2F;
+}
+
+.wishlist-card .btn-remove:hover {
+    background-color: #FFB3B3;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 40px;
+}
+
+.empty-state h2 {
+    font-size: 28px;
+    color: var(--color-black);
+    margin-bottom: 20px;
+}
+
+.btn-explore {
+    padding: 12px 28px;
+    background: linear-gradient(135deg, var(--color-electric-blue), var(--color-bmw-blue));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* ============================================
+   FAVORITE SECTION (Removed - not in PHP)
+   ============================================ */
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .wishlist-header {
+        padding: 50px 20px;
+    }
+
+    .wishlist-header h1 {
+        font-size: clamp(24px, 6vw, 36px);
+    }
+
+    .wishlist-container {
+        padding: 40px 20px;
+    }
+
+    .wishlist-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wishlist-header {
+        padding: 30px 15px;
+    }
+
+    .wishlist-header h1 {
+        font-size: 24px;
+    }
+
+    .wishlist-container {
+        padding: 20px 15px;
+    }
+
+    .wishlist-card .card-image {
+        height: 200px;
+    }
+
+    .wishlist-card .card-details {
+        padding: 15px;
+    }
+
+    .wishlist-card h3 {
+        font-size: 16px;
+    }
+
+    .wishlist-card .card-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .empty-state {
+        padding: 40px 15px;
+    }
+
+    .empty-state h2 {
+        font-size: 22px;
+    }
+}

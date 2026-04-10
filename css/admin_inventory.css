@@ -1,0 +1,89 @@
+/* INVENTORY SECTION */
+
+.inventory-section{
+margin-top:60px;
+background:#f6f7fb;
+padding:40px;
+border-radius:20px;
+}
+
+.inventory-title{
+font-size:32px;
+color:#5a6acb;
+margin-bottom:25px;
+font-weight:700;
+}
+
+/* TABLE */
+
+.inventory-table{
+width:100%;
+border-collapse:collapse;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* HEADER */
+
+.inventory-table thead{
+background:linear-gradient(90deg,#5a6acb,#7b4bc4);
+color:white;
+}
+
+.inventory-table th{
+padding:16px;
+text-align:left;
+font-size:15px;
+}
+
+/* BODY */
+
+.inventory-table td{
+padding:18px 16px;
+border-bottom:1px solid #eee;
+font-size:14px;
+color:#444;
+}
+
+/* IMAGE */
+
+.car-thumb{
+width:80px;
+height:100px;
+object-fit:cover;
+border-radius:6px;
+}
+
+/* BUTTONS */
+
+.actions{
+display:flex;
+gap:10px;
+}
+
+.btn{
+padding:8px 16px;
+border-radius:6px;
+font-size:14px;
+text-decoration:none;
+color:white;
+font-weight:500;
+}
+
+.edit{
+background:#5a6acb;
+}
+
+.delete{
+background:#ff5b5b;
+}
+
+.view{
+background:#5a6acb;
+}
+
+.btn:hover{
+opacity:0.9;
+}

@@ -1,0 +1,242 @@
+/* Inquiries Section Styling */
+
+.inquiries-section {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8f4f8 100%);
+    border-radius: 12px;
+    margin: 30px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #0066cc, #00a8ff);
+    border-radius: 2px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Inquiry Card Styling */
+.inquiry-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: none !important;
+    padding: 25px !important;
+    margin-bottom: 20px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 24px rgba(0, 102, 204, 0.12), 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.inquiry-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #0066cc, #00a8ff, #00d4ff);
+    animation: slideRight 3s ease infinite;
+}
+
+@keyframes slideRight {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.inquiry-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 102, 204, 0.2), 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+}
+
+.inquiry-card h3 {
+    color: #0066cc;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.inquiry-card h3::before {
+    content: '✉️';
+    font-size: 24px;
+}
+
+.inquiry-card p {
+    color: #333;
+    font-size: 15px;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.inquiry-card p strong {
+    color: #0066cc;
+    font-weight: 600;
+}
+
+.inquiry-card img {
+    max-width: 200px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.inquiry-card img:hover {
+    transform: scale(1.05);
+}
+
+/* Action Buttons Container */
+.inquiry-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+/* Button Styling */
+.inquiry-card .btn-outline,
+.inquiry-card .cancel-btn {
+    transition: all 0.3s ease !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.inquiry-card .btn-outline {
+    background: linear-gradient(135deg, #0066cc, #0052a3) !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+.inquiry-card .btn-outline:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.4);
+    background: linear-gradient(135deg, #0052a3, #003d80) !important;
+}
+
+.inquiry-card .cancel-btn {
+    background: linear-gradient(135deg, #ff4444, #cc0000) !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    box-shadow: 0 4px 12px rgba(255, 68, 68, 0.3);
+}
+
+.inquiry-card .cancel-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 68, 68, 0.4);
+    background: linear-gradient(135deg, #cc0000, #990000) !important;
+}
+
+/* Empty State Styling */
+.inquiries-section p[style*="text-align: center"] {
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(0, 212, 255, 0.05));
+    padding: 30px !important;
+    border-radius: 10px;
+    border: 2px dashed #0066cc;
+    color: #333;
+    font-size: 16px;
+}
+
+.inquiries-section p[style*="text-align: center"] a {
+    color: #0066cc;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.inquiries-section p[style*="text-align: center"] a:hover {
+    color: #00a8ff;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .inquiries-section {
+        padding: 25px 15px;
+    }
+    
+    .section-header h2 {
+        font-size: 24px;
+    }
+    
+    .inquiry-card {
+        padding: 20px !important;
+    }
+    
+    .inquiry-card h3 {
+        font-size: 18px;
+    }
+    
+    .inquiry-actions {
+        flex-direction: column;
+    }
+    
+    .inquiry-card .btn-outline,
+    .inquiry-card .cancel-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Animation for entry */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.inquiry-card {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.inquiry-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.inquiry-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.inquiry-card:nth-child(4) {
+    animation-delay: 0.3s;
+}

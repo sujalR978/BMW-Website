@@ -1,0 +1,656 @@
+/* ============================================
+   PROFILE PAGE - CUSTOM STYLES
+   BMW Luxury Theme - White & Black
+   ============================================ */
+
+:root {
+    --color-white-bg: #FFFFFF;
+    --color-light-gray: #F5F5F5;
+    --color-light-gray-2: #EEEEEE;
+    --color-bmw-blue: #0066B1;
+    --color-electric-blue: #1C69D4;
+    --color-sky-blue: #00A8E8;
+    --color-black: #000000;
+    --color-dark-text: #1A1A1A;
+    --color-medium-gray: #666666;
+    --color-success: #4CAF50;
+}
+
+body {
+    background-color: var(--color-white-bg);
+    color: var(--color-black);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============================================
+   PROFILE SECTION
+   ============================================ */
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background: linear-gradient(135deg, var(--color-white-bg) 0%, var(--color-light-gray-2) 100%);
+    border-bottom: 2px solid var(--color-electric-blue);
+    box-shadow: 0 10px 30px rgba(28, 105, 212, 0.1);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(28, 105, 212, 0.3);
+}
+
+.profile-info h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin: 0 0 10px 0;
+}
+
+.profile-info p {
+    color: var(--color-medium-gray);
+    font-size: 14px;
+    margin: 8px 0 0 0;
+}
+
+.badges {
+    display: flex;
+    gap: 10px;
+    margin: 12px 0;
+    flex-wrap: wrap;
+}
+
+.badges span {
+    padding: 6px 12px;
+    background: rgba(28, 105, 212, 0.1);
+    color: var(--color-electric-blue);
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-outline,
+.btn-dark {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-electric-blue);
+    border: 2px solid var(--color-electric-blue);
+}
+
+.btn-outline:hover {
+    background-color: rgba(28, 105, 212, 0.1);
+    border-color: var(--color-sky-blue);
+    color: var(--color-sky-blue);
+}
+
+.btn-dark {
+    background: linear-gradient(135deg, var(--color-electric-blue), var(--color-bmw-blue));
+    color: white;
+    box-shadow: 0 6px 20px rgba(28, 105, 212, 0.3);
+}
+
+.btn-dark:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(28, 105, 212, 0.5);
+}
+
+/* ============================================
+   VEHICLES SECTION
+   ============================================ */
+
+.vehicles-section {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vehicles-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.vehicles-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin: 0;
+}
+
+.vehicles-header p {
+    color: var(--color-medium-gray);
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+
+.vehicle-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.vehicles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.vehicle-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(28, 105, 212, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.35s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-6px);
+    border: 1px solid rgba(28, 105, 212, 0.5);
+    box-shadow: 0 12px 30px rgba(28, 105, 212, 0.15);
+}
+
+.vehicle-icon {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.vehicle-card strong {
+    display: block;
+    font-size: 18px;
+    color: var(--color-black);
+    margin: 15px 0 5px 0;
+}
+
+.vehicle-card small {
+    color: var(--color-medium-gray);
+    font-size: 12px;
+    display: block;
+}
+
+.vehicle-card h4 {
+    font-size: 14px;
+    color: var(--color-electric-blue);
+    margin: 10px 0 0 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================
+   SAVED CARS SECTION
+   ============================================ */
+
+.saved-cars-section {
+    padding: 60px 40px;
+    background-color: var(--color-light-gray);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin: 0 0 10px 0;
+}
+
+.section-header p {
+    color: var(--color-medium-gray);
+    font-size: 14px;
+    margin: 0;
+}
+
+.saved-cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.saved-car-card {
+    background: white;
+    border: 1px solid rgba(28, 105, 212, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.35s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.saved-car-card:hover {
+    transform: translateY(-6px);
+    border: 1px solid rgba(28, 105, 212, 0.5);
+    box-shadow: 0 12px 30px rgba(28, 105, 212, 0.15);
+}
+
+.saved-car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.saved-car-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin: 10px 0 5px 0;
+}
+
+.saved-car-card p {
+    color: var(--color-electric-blue);
+    font-weight: 700;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.remove-btn {
+    padding: 8px 16px;
+    background-color: #FFE5E5;
+    color: #D32F2F;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.remove-btn:hover {
+    background-color: #FFB3B3;
+}
+
+/* ============================================
+   COMPARISON SECTION
+   ============================================ */
+
+.comparison-section {
+    padding: 60px 40px;
+}
+
+.comparison-table {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid rgba(28, 105, 212, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid rgba(28, 105, 212, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.comparison-row:last-child {
+    border-bottom: none;
+}
+
+.comparison-row.header {
+    background-color: var(--color-light-gray-2);
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+.comparison-row:not(.header):hover {
+    background-color: rgba(28, 105, 212, 0.05);
+}
+
+.comparison-row > div {
+    padding: 20px;
+    border-right: 1px solid rgba(28, 105, 212, 0.1);
+    font-size: 14px;
+    color: var(--color-dark-text);
+}
+
+.comparison-row > div:last-child {
+    border-right: none;
+}
+
+/* ============================================
+   SERVICE HISTORY SECTION
+   ============================================ */
+
+.service-history-section {
+    padding: 60px 40px;
+    background-color: var(--color-light-gray);
+}
+
+.service-history {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid rgba(28, 105, 212, 0.2);
+    border-radius: 12px;
+    padding: 25px;
+    transition: all 0.35s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border: 1px solid rgba(28, 105, 212, 0.5);
+    box-shadow: 0 12px 30px rgba(28, 105, 212, 0.15);
+}
+
+.service-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin: 0 0 15px 0;
+}
+
+.service-card p {
+    color: var(--color-medium-gray);
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 8px 0;
+}
+
+/* ============================================
+   TEST DRIVE SECTION
+   ============================================ */
+
+.test-drive-section {
+    padding: 60px 40px;
+}
+
+.test-drive-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid rgba(28, 105, 212, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.test-drive-icon {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.test-drive-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin: 20px 0;
+}
+
+.test-drive-card p {
+    color: var(--color-dark-text);
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+.reschedule-btn,
+.cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.reschedule-btn {
+    background: linear-gradient(135deg, var(--color-electric-blue), var(--color-bmw-blue));
+    color: white;
+}
+
+.reschedule-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(28, 105, 212, 0.3);
+}
+
+.cancel-btn {
+    background-color: #FFE5E5;
+    color: #D32F2F;
+}
+
+.cancel-btn:hover {
+    background-color: #FFB3B3;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-left {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .profile-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .vehicles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .comparison-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service-history {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .profile {
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-info h2 {
+        font-size: 24px;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-outline,
+    .btn-dark {
+        width: 100%;
+    }
+
+    .vehicles-section,
+    .saved-cars-section,
+    .comparison-section,
+    .service-history-section,
+    .test-drive-section {
+        padding: 40px 20px;
+    }
+
+    .vehicles-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .vehicle-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .vehicles {
+        grid-template-columns: 1fr;
+    }
+
+    .saved-cars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-row {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-row > div {
+        border-right: none;
+        border-bottom: 1px solid rgba(28, 105, 212, 0.1);
+    }
+
+    .comparison-row > div:last-child {
+        border-bottom: none;
+    }
+
+    .service-history {
+        grid-template-columns: 1fr;
+    }
+
+    .reschedule-btn,
+    .cancel-btn {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile {
+        padding: 20px 15px;
+    }
+
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-info h2 {
+        font-size: 20px;
+    }
+
+    .profile-left {
+        gap: 15px;
+    }
+
+    .vehicles-section,
+    .saved-cars-section,
+    .comparison-section,
+    .service-history-section,
+    .test-drive-section {
+        padding: 30px 15px;
+    }
+
+    .section-header h2 {
+        font-size: 22px;
+    }
+
+    .vehicles-header h2 {
+        font-size: 22px;
+    }
+
+    .saved-cars-grid,
+    .vehicles {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .saved-car-card img,
+    .vehicle-icon {
+        height: 180px;
+    }
+
+    .comparison-table {
+        font-size: 12px;
+    }
+
+    .comparison-row > div {
+        padding: 15px;
+    }
+
+    .service-card {
+        padding: 15px;
+    }
+
+    .service-card h3 {
+        font-size: 16px;
+    }
+
+    .test-drive-card {
+        padding: 20px;
+    }
+
+    .test-drive-icon {
+        height: 200px;
+    }
+
+    .test-drive-card h3 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,336 @@
+/* ============================================
+   DARK THEME - CAR MODELS PAGE STYLES
+   ============================================ */
+
+/* Dark Page Background */
+.dark-theme {
+    background: var(--dark-bg-primary) !important;
+}
+
+/* Dark Car Model Section */
+.dark-theme .Mtext-1 {
+    color: #4db8a8 !important;
+    text-shadow: 0 2px 10px rgba(77, 184, 168, 0.3) !important;
+    font-size: 48px !important;
+    font-weight: 700 !important;
+}
+
+.dark-theme .MtextSmal-1 {
+    color: #b0b0b0 !important;
+    font-size: 18px !important;
+}
+
+/* Dark Model Navigation */
+.dark-theme .model-nav {
+    background: rgba(77, 184, 168, 0.08) !important;
+    border: 2px solid rgba(77, 184, 168, 0.2) !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    justify-content: center !important;
+}
+
+.dark-theme .nav-item {
+    background: transparent !important;
+    color: #b0b0b0 !important;
+    border: 2px solid rgba(77, 184, 168, 0.3) !important;
+    padding: 10px 20px !important;
+    border-radius: 25px !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.dark-theme .nav-item:hover {
+    background: rgba(77, 184, 168, 0.15) !important;
+    color: #4db8a8 !important;
+    border-color: #4db8a8 !important;
+    transform: translateY(-2px) !important;
+}
+
+.dark-theme .nav-item.active {
+    background: linear-gradient(135deg, #4db8a8 0%, #64b5f6 100%) !important;
+    color: var(--dark-bg-primary) !important;
+    border-color: #4db8a8 !important;
+}
+
+/* Dark Category Heading */
+.dark-theme .category-heading {
+    color: #4db8a8 !important;
+    text-shadow: 0 2px 10px rgba(77, 184, 168, 0.3) !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    margin: 30px 0 !important;
+    text-align: center !important;
+}
+
+/* Dark Model Container */
+.dark-theme .model-container {
+    background: transparent !important;
+}
+
+/* Dark Model Grid */
+.dark-theme .Model-grid,
+.dark-theme [class*="model-grid"] {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 20px !important;
+}
+
+/* Dark BMW Model Items */
+.dark-theme [class*="model-item"],
+.dark-theme .model-card {
+    background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%) !important;
+    border: 2px solid rgba(77, 184, 168, 0.2) !important;
+    border-radius: 12px !important;
+    padding: 15px !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+.dark-theme [class*="model-item"]:hover,
+.dark-theme .model-card:hover {
+    border-color: #4db8a8 !important;
+    box-shadow: 0 12px 40px rgba(77, 184, 168, 0.3) !important;
+    transform: translateY(-10px) scale(1.02) !important;
+    background: linear-gradient(135deg, #252525 0%, #1a1a1a 100%) !important;
+}
+
+/* Dark Model Image */
+.dark-theme [class*="model-image"],
+.dark-theme .model-img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    filter: brightness(0.85) !important;
+    transition: filter 0.3s ease !important;
+    background: rgba(77, 184, 168, 0.1) !important;
+}
+
+.dark-theme [class*="model-item"]:hover [class*="model-image"],
+.dark-theme .model-card:hover .model-img {
+    filter: brightness(1.05) !important;
+}
+
+/* Dark Model Info */
+.dark-theme .model-info {
+    padding: 15px 0 !important;
+    text-align: center !important;
+}
+
+.dark-theme .model-name {
+    color: #4db8a8 !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin: 10px 0 !important;
+}
+
+.dark-theme .model-type {
+    color: #b0b0b0 !important;
+    font-size: 14px !important;
+    margin-bottom: 8px !important;
+}
+
+.dark-theme .model-price {
+    color: #64b5f6 !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    margin: 10px 0 !important;
+}
+
+.dark-theme .model-description {
+    color: #808080 !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+}
+
+/* Dark Specs */
+.dark-theme .spec-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    margin: 10px 0 !important;
+}
+
+.dark-theme .spec-item {
+    color: #b0b0b0 !important;
+    font-size: 13px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.dark-theme .spec-item i {
+    color: #4db8a8 !important;
+}
+
+/* Dark Buttons */
+.dark-theme [class*="btn"],
+.dark-theme button {
+    background: linear-gradient(135deg, #4db8a8 0%, #64b5f6 100%) !important;
+    color: var(--dark-bg-primary) !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-weight: 600 !important;
+}
+
+.dark-theme button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(77, 184, 168, 0.4) !important;
+}
+
+/* Dark Filter Section */
+.dark-theme .filter-section {
+    background: rgba(77, 184, 168, 0.08) !important;
+    border: 2px solid rgba(77, 184, 168, 0.2) !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    margin-bottom: 30px !important;
+}
+
+.dark-theme .filter-section h3 {
+    color: #4db8a8 !important;
+}
+
+.dark-theme .filter-option {
+    background: rgba(77, 184, 168, 0.05) !important;
+    border: 2px solid rgba(77, 184, 168, 0.2) !important;
+    padding: 10px 15px !important;
+    border-radius: 8px !important;
+    color: #b0b0b0 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.dark-theme .filter-option:hover {
+    background: rgba(77, 184, 168, 0.15) !important;
+    border-color: #4db8a8 !important;
+    color: #4db8a8 !important;
+}
+
+.dark-theme .filter-option.active {
+    background: linear-gradient(135deg, #4db8a8 0%, #64b5f6 100%) !important;
+    border-color: #4db8a8 !important;
+    color: var(--dark-bg-primary) !important;
+}
+
+/* Dark Comparison Section */
+.dark-theme .comparison-section {
+    background: rgba(77, 184, 168, 0.08) !important;
+    border: 2px solid rgba(77, 184, 168, 0.2) !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    margin: 30px 0 !important;
+}
+
+.dark-theme .comparison-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+}
+
+.dark-theme .comparison-table th {
+    background: rgba(77, 184, 168, 0.15) !important;
+    color: #4db8a8 !important;
+    padding: 12px !important;
+    border: 1px solid rgba(77, 184, 168, 0.2) !important;
+}
+
+.dark-theme .comparison-table td {
+    padding: 12px !important;
+    border: 1px solid rgba(77, 184, 168, 0.2) !important;
+    color: #b0b0b0 !important;
+}
+
+.dark-theme .comparison-table tr:hover {
+    background: rgba(77, 184, 168, 0.1) !important;
+}
+
+/* Dark Sidebar */
+.dark-theme .sidebar {
+    background: rgba(77, 184, 168, 0.08) !important;
+    border: 2px solid rgba(77, 184, 168, 0.2) !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+}
+
+.dark-theme .sidebar h3 {
+    color: #4db8a8 !important;
+    border-bottom: 2px solid rgba(77, 184, 168, 0.3) !important;
+    padding-bottom: 10px !important;
+}
+
+.dark-theme .sidebar ul li a {
+    color: #b0b0b0 !important;
+    transition: all 0.3s ease !important;
+}
+
+.dark-theme .sidebar ul li a:hover {
+    color: #4db8a8 !important;
+    padding-left: 10px !important;
+}
+
+/* ============================================
+   DARK THEME - FOOTER TOGGLE BUTTON
+   ============================================ */
+
+.dark-theme .footer-theme-toggle-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 20px !important;
+    margin-top: 20px !important;
+    border-top: 2px solid rgba(77, 184, 168, 0.2) !important;
+}
+
+.dark-theme .footer-theme-toggle-btn {
+    background: linear-gradient(135deg, #4db8a8 0%, #64b5f6 100%) !important;
+    color: var(--dark-bg-primary) !important;
+    border: 2px solid #4db8a8 !important;
+    padding: 12px 24px !important;
+    border-radius: 25px !important;
+    cursor: pointer !important;
+    font-size: 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 15px rgba(77, 184, 168, 0.3) !important;
+}
+
+.dark-theme .footer-theme-toggle-btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(77, 184, 168, 0.5) !important;
+    background: linear-gradient(135deg, #64b5f6 0%, #4db8a8 100%) !important;
+}
+
+.dark-theme .footer-theme-toggle-btn:active {
+    transform: translateY(-1px) !important;
+}
+
+.dark-theme .footer-theme-toggle-btn .theme-icon {
+    font-size: 20px !important;
+    display: inline-block !important;
+    transition: transform 0.3s ease !important;
+}
+
+.dark-theme .footer-theme-toggle-btn:hover .theme-icon {
+    transform: rotate(20deg) scale(1.1) !important;
+}
+
+/* Dark Loading State */
+.dark-theme .loading {
+    color: #4db8a8 !important;
+}
+
+.dark-theme .spinner {
+    border-color: rgba(77, 184, 168, 0.2) !important;
+    border-top-color: #4db8a8 !important;
+}

@@ -1,0 +1,828 @@
+/* ==================== CSS Variables ==================== */
+:root {
+    --primary-color: #5484d1;
+    --secondary-color: #003366;
+    --accent-color: #508fce;
+    --light-color: #f8f9fa;
+    --dark-color: #1a1a1a;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --gradient-primary: linear-gradient(135deg, #3567b8 0%, #477eb5 100%);
+    --gradient-light: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+/* ==================== General Styles ==================== */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* ==================== Hero Section ==================== */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 80px 20px 20px;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-gradient {
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 102, 204, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-car-icon {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    font-size: 200px;
+    opacity: 0.1;
+    animation: bounce 3s ease-in-out infinite;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    animation: slideUp 0.8s ease-out;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    opacity: 0.85;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* ==================== Featured Cars Section ==================== */
+.featured-cars {
+    background: #f8f9fa;
+    padding: 80px 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+.car-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.car-image {
+    position: relative;
+    height: 250px;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f3f4f6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.car-image i {
+    font-size: 120px;
+    color: var(--primary-color);
+    opacity: 0.8;
+}
+
+.badge-new,
+.badge-electric,
+.badge-suv {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-new {
+    background: var(--success-color);
+    color: white;
+}
+
+.badge-electric {
+    background: var(--info-color);
+    color: white;
+}
+
+.badge-suv {
+    background: var(--warning-color);
+    color: #333;
+}
+
+.car-info {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.car-info h5 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.car-subtitle {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.car-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.car-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.spec-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.spec-item i {
+    color: var(--accent-color);
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.spec-item span {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.price-info {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.car-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 8px 0;
+}
+
+.car-availability {
+    color: var(--success-color);
+    font-size: 0.9rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ==================== Features Section ==================== */
+.features-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.info-card {
+    text-align: center;
+    padding: 40px 25px;
+    border-radius: 15px;
+    background: var(--light-color);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.info-card:hover {
+    background: var(--gradient-primary);
+    color: white;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(31, 71, 136, 0.15);
+}
+
+.info-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover .info-icon {
+    color: white;
+    transform: scale(1.1);
+}
+
+.info-card h5 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.info-card:hover h5 {
+    color: white;
+}
+
+.info-card p {
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.info-card:hover p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ==================== Heritage Section ==================== */
+.heritage-section {
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+
+.heritage-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.heritage-content p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.heritage-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.stat-box h4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* ==================== Lineup Section ==================== */
+.lineup-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.lineup-card {
+    background: var(--light-color);
+    padding: 30px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--accent-color);
+    height: 100%;
+}
+
+.lineup-card:hover {
+    background: var(--gradient-primary);
+    color: white;
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(31, 71, 136, 0.15);
+}
+
+.lineup-card h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--primary-color);
+}
+
+.lineup-card:hover h5 {
+    color: white;
+}
+
+.lineup-card h5 i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.lineup-card:hover h5 i {
+    color: white;
+}
+
+.lineup-card p {
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.lineup-card:hover p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ==================== Testimonials Section ==================== */
+.testimonials-section {
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.rating {
+    margin-bottom: 20px;
+}
+
+.rating i {
+    color: var(--warning-color);
+    margin-right: 5px;
+    font-size: 1.1rem;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    flex: 1;
+    font-style: italic;
+}
+
+.testimonial-author {
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.testimonial-author strong {
+    display: block;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.testimonial-author p {
+    color: #999;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ==================== Technology Section ==================== */
+.technology-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.tech-info {
+    padding: 30px;
+    background: var(--light-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.tech-info:hover {
+    background: var(--gradient-primary);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(31, 71, 136, 0.15);
+}
+
+.tech-info h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.tech-info:hover h5 {
+    color: white;
+}
+
+.tech-info h5 i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.tech-info:hover h5 i {
+    color: white;
+}
+
+.tech-info p {
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.tech-info:hover p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ==================== Animations ==================== */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .floating-car-icon {
+        font-size: 100px;
+    }
+
+    .car-image {
+        height: 180px;
+    }
+
+    .car-image i {
+        font-size: 80px;
+    }
+
+    .info-card {
+        padding: 30px 20px;
+    }
+
+    .info-icon {
+        font-size: 2.5rem;
+    }
+
+    .heritage-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-box {
+        padding: 20px;
+    }
+
+    .stat-box h4 {
+        font-size: 2rem;
+    }
+
+    .testimonial-card {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .car-card {
+        margin: 10px 0;
+    }
+
+    .car-info {
+        padding: 20px;
+    }
+
+    .car-info h5 {
+        font-size: 1.2rem;
+    }
+
+    .spec-item {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    .car-price {
+        font-size: 1.1rem;
+    }
+
+    .info-card {
+        padding: 25px 15px;
+    }
+
+    .info-icon {
+        font-size: 2rem;
+    }
+
+    .heritage-stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .stat-box {
+        padding: 15px;
+    }
+
+    .stat-box h4 {
+        font-size: 1.5rem;
+    }
+
+    .lineup-card {
+        padding: 20px;
+    }
+
+    .lineup-card h5 {
+        font-size: 1rem;
+    }
+
+    .testimonial-card {
+        padding: 25px 15px;
+    }
+
+    .tech-info {
+        padding: 20px;
+    }
+
+    .tech-info h5 {
+        font-size: 1rem;
+    }
+}
+
+/* ==================== Utility Classes ==================== */
+.text-center {
+    text-align: center;
+}
+
+.align-items-center {
+    display: flex;
+    align-items: center;
+}
+
+/* ==================== Grid System ==================== */
+.grid-row {
+    display: grid;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.grid-row.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-row.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 90px;
+}
+
+.grid-row.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 70px;
+}
+
+.grid-col-2 {
+    grid-column: span 1;
+}
+
+.grid-col-3 {
+    grid-column: span 1;
+}
+
+.grid-col-4 {
+    grid-column: span 1;
+}
+
+/* ==================== Spacing Utilities ==================== */
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==================== Responsive Grid ==================== */
+@media (max-width: 1024px) {
+    .grid-row.grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-row.grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .grid-row.grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-row {
+        gap: 16px;
+    }
+    
+    .grid-row.grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-row.grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-row.grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .align-items-center {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-row {
+        gap: 12px;
+    }
+    
+    .grid-row.grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-row.grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-row.grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+

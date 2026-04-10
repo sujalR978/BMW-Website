@@ -1,0 +1,561 @@
+/* ============================================
+   TEST DRIVE PAGE - CUSTOM STYLES
+   BMW Luxury Theme - White & Black
+   ============================================ */
+
+:root {
+    --color-white-bg: #FFFFFF;
+    --color-light-gray: #F5F5F5;
+    --color-light-gray-2: #EEEEEE;
+    --color-bmw-blue: #0066B1;
+    --color-electric-blue: #1C69D4;
+    --color-sky-blue: #00A8E8;
+    --color-black: #000000;
+    --color-dark-text: #1A1A1A;
+    --color-medium-gray: #666666;
+    --color-success: #4CAF50;
+}
+
+body {
+    background-color: var(--color-white-bg);
+    color: var(--color-black);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============================================
+   HERO SECTION (Test Drive)
+   ============================================ */
+
+.hero-section {
+    padding: 80px 40px;
+    background: linear-gradient(135deg, var(--color-white-bg) 0%, var(--color-light-gray-2) 100%);
+    border-bottom: 2px solid var(--color-electric-blue);
+    box-shadow: 0 10px 30px rgba(28, 105, 212, 0.1);
+    text-align: center;
+}
+
+.hero-title {
+    font-size: clamp(28px, 8vw, 48px);
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--color-black);
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    color: var(--color-medium-gray);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   FORM SECTION (Test Drive)
+   ============================================ */
+
+.form-section {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.form-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(28, 105, 212, 0.2);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: 15px;
+}
+
+.form-card > p {
+    color: var(--color-medium-gray);
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.test-drive-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-row .form-group {
+    grid-column: span 1;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-black);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 14px;
+    border: 1px solid rgba(28, 105, 212, 0.3);
+    border-radius: 6px;
+    background-color: white;
+    color: var(--color-black);
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--color-medium-gray);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border: 1px solid var(--color-electric-blue);
+    box-shadow: 0 0 15px rgba(28, 105, 212, 0.3);
+    background-color: rgba(28, 105, 212, 0.05);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-btn {
+    padding: 14px 28px;
+    background: linear-gradient(135deg, var(--color-electric-blue), var(--color-bmw-blue));
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(28, 105, 212, 0.5);
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(28, 105, 212, 0.2);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.info-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: 30px;
+}
+
+.info-item {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(28, 105, 212, 0.1);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-electric-blue);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-item p {
+    color: var(--color-medium-gray);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+/* ============================================
+   TIME SLOTS SECTION
+   ============================================ */
+
+.time-slots-section {
+    padding: 80px 40px;
+    background-color: var(--color-light-gray);
+    text-align: center;
+}
+
+.time-slots-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--color-black);
+}
+
+.time-slots-section > p {
+    font-size: 16px;
+    color: var(--color-medium-gray);
+    margin-bottom: 30px;
+}
+
+.time-slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.time-slot {
+    padding: 15px;
+    background: white;
+    border: 2px solid rgba(28, 105, 212, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    color: var(--color-dark-text);
+}
+
+.time-slot:hover {
+    border-color: var(--color-electric-blue);
+    background-color: rgba(28, 105, 212, 0.1);
+}
+
+.time-slot.selected {
+    background: linear-gradient(135deg, var(--color-electric-blue), var(--color-bmw-blue));
+    color: white;
+    border-color: var(--color-electric-blue);
+}
+
+/* ============================================
+   CAR PREVIEW SECTION
+   ============================================ */
+
+.car-preview-section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.car-preview-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--color-black);
+}
+
+.car-preview-section > p {
+    font-size: 16px;
+    color: var(--color-medium-gray);
+    margin-bottom: 50px;
+}
+
+.car-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.car-preview-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(28, 105, 212, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.car-preview-card:hover {
+    transform: translateY(-8px);
+    border: 1px solid rgba(28, 105, 212, 0.5);
+    box-shadow: 0 12px 30px rgba(28, 105, 212, 0.15);
+}
+
+.car-preview-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.car-preview-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-black);
+    padding: 20px 20px 10px;
+}
+
+.car-preview-card p {
+    color: var(--color-medium-gray);
+    font-size: 14px;
+    padding: 0 20px 20px;
+}
+
+/* ============================================
+   REVIEWS SECTION
+   ============================================ */
+
+.reviews-section {
+    padding: 80px 40px;
+    background-color: var(--color-light-gray);
+    text-align: center;
+}
+
+.reviews-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--color-black);
+}
+
+.reviews-section > p {
+    font-size: 16px;
+    color: var(--color-medium-gray);
+    margin-bottom: 50px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background: white;
+    border: 1px solid rgba(28, 105, 212, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.35s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.review-card:hover {
+    transform: translateY(-6px);
+    border: 1px solid rgba(28, 105, 212, 0.5);
+    box-shadow: 0 12px 30px rgba(28, 105, 212, 0.15);
+}
+
+.review-stars {
+    color: #FFC107;
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.review-card p {
+    color: var(--color-medium-gray);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.review-card cite {
+    color: var(--color-black);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .form-section {
+        grid-template-columns: 1fr;
+    }
+
+    .time-slots-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .car-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 20px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .form-section {
+        padding: 50px 20px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .form-card,
+    .info-card {
+        padding: 25px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .time-slots-section {
+        padding: 50px 20px;
+    }
+
+    .time-slots-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        max-width: 100%;
+    }
+
+    .time-slot {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .car-preview-section {
+        padding: 50px 20px;
+    }
+
+    .car-preview-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .reviews-section {
+        padding: 50px 20px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 30px 15px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+    }
+
+    .form-section {
+        padding: 30px 15px;
+    }
+
+    .form-card,
+    .info-card {
+        padding: 20px;
+    }
+
+    .form-card h2 {
+        font-size: 22px;
+    }
+
+    .info-card h3 {
+        font-size: 18px;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+    .time-slots-section {
+        padding: 30px 15px;
+    }
+
+    .time-slots-section h2 {
+        font-size: 28px;
+    }
+
+    .time-slots-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .time-slot {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .car-preview-section {
+        padding: 30px 15px;
+    }
+
+    .car-preview-section h2 {
+        font-size: 28px;
+    }
+
+    .car-preview-card img {
+        height: 200px;
+    }
+
+    .car-preview-card h3 {
+        font-size: 18px;
+    }
+
+    .reviews-section {
+        padding: 30px 15px;
+    }
+
+    .reviews-section h2 {
+        font-size: 28px;
+    }
+
+    .review-card {
+        padding: 20px;
+    }
+}
+
+

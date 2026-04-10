@@ -1,0 +1,991 @@
+/* ============================================================
+   BMW CHECKOUT PAGE - COMPLETE CUSTOM CSS (NO BOOTSTRAP)
+   ============================================================ */
+
+/* ============ ROOT VARIABLES ============ */
+:root {
+    --rework-primary-color: #667eea;
+    --rework-secondary-color: #764ba2;
+    --rework-success-color: #28a745;
+    --rework-danger-color: #dc3545;
+    --rework-warning-color: #ffc107;
+    --rework-info-color: #17a2b8;
+    --rework-light-bg: #f8f9fa;
+    --rework-border-color: #dee2e6;
+    --rework-text-color: #333;
+    --rework-text-muted: #6c757d;
+}
+
+/* ============ GLOBAL STYLES (scoped to checkout only) ============ */
+.rework-main-container,
+.rework-main-container * {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Only apply body styles to checkout page */
+body.rework-checkout-page {
+    animation: rework-fadeIn 0.4s ease-in;
+}
+
+/* ============ TYPOGRAPHY ============ */
+.rework-main-container h1, 
+.rework-main-container h2, 
+.rework-main-container h3, 
+.rework-main-container h4, 
+.rework-main-container h5, 
+.rework-main-container h6 {
+    margin: 0;
+    font-weight: 700;
+}
+
+.rework-main-container h5 {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.rework-main-container h6 {
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+}
+
+.rework-main-container p {
+    margin: 0 0 12px 0;
+}
+
+.rework-main-container small {
+    font-size: 12px;
+}
+
+.rework-main-container strong {
+    font-weight: 700;
+}
+
+/* ============ CONTAINER & LAYOUT ============ */
+.rework-main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 15px;
+}
+
+.rework-row-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+
+.rework-col-lg-8 {
+    grid-column: span 8;
+}
+
+.rework-col-lg-4 {
+    grid-column: span 4;
+}
+
+.rework-row-items {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    align-items: center;
+}
+
+.rework-col-item-3 {
+    grid-column: span 3;
+}
+
+.rework-col-item-4 {
+    grid-column: span 4;
+}
+
+.rework-col-item-6 {
+    grid-column: span 6;
+}
+
+.rework-col-item-8 {
+    grid-column: span 8;
+}
+
+/* ============ TEXT UTILITIES ============ */
+.rework-text-right {
+    text-align: right;
+}
+
+.rework-text-subtle {
+    color: #6c757d;
+    font-size: 13px;
+}
+
+/* ============ CARDS ============ */
+.rework-card {
+    border: none;
+    border-radius: 12px;
+    background: white;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.rework-checkout-card {
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.rework-checkout-card:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    border-color: var(--rework-primary-color);
+}
+
+.rework-card-header {
+    border: none;
+    padding: 20px 24px;
+    border-radius: 12px 12px 0 0;
+}
+
+.rework-header-primary {
+    background: linear-gradient(135deg, #0c63e4 0%, #0b5ed7 100%) !important;
+    color: white !important;
+}
+
+.rework-header-dark {
+    background: linear-gradient(135deg, #212529 0%, #343a40 100%) !important;
+    color: white !important;
+}
+
+.rework-card-body {
+    padding: 24px;
+}
+
+.rework-checkout-summary {
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    background: white;
+    transition: all 0.4s ease;
+}
+
+.rework-checkout-summary:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ============ PROGRESS STEPS ============ */
+.rework-checkout-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border: 2px solid #f0f0f0;
+    margin-bottom: 32px;
+}
+
+.rework-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.rework-step:hover {
+    transform: translateY(-2px);
+}
+
+.rework-step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--rework-text-muted);
+    margin-bottom: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.rework-step.rework-step-active .rework-step-number {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    transform: scale(1.1);
+}
+
+.rework-step-label {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--rework-text-muted);
+    text-align: center;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.rework-step.rework-step-active .rework-step-label {
+    color: var(--rework-primary-color);
+    font-weight: 800;
+}
+
+.rework-step-line {
+    height: 4px;
+    background: linear-gradient(90deg, #e9ecef 0%, #dee2e6 100%);
+    flex: 0 0 auto;
+    width: 60px;
+    margin: 0 20px;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ============ FORM STYLES ============ */
+.rework-form-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    margin-bottom: 0;
+}
+
+.rework-form-group {
+    margin-bottom: 16px;
+}
+
+.rework-form-group-col-6 {
+    grid-column: span 6;
+}
+
+.rework-form-group-col-3 {
+    grid-column: span 3;
+}
+
+.rework-form-label {
+    font-weight: 800;
+    color: white;
+    margin-bottom: 12px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.rework-form-label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.5s ease;
+}
+
+.rework-form-label:hover::before {
+    left: 100%;
+}
+
+.rework-form-label:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
+}
+
+.rework-form-control {
+    border: 2px solid #e9ecef !important;
+    border-radius: 8px !important;
+    padding: 12px 14px !important;
+    font-size: 14px !important;
+    transition: all 0.3s ease !important;
+    background-color: #fafbfc !important;
+    width: 100% !important;
+    font-family: inherit !important;
+}
+
+.rework-form-control:focus {
+    border-color: var(--rework-primary-color) !important;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1) !important;
+    background-color: white !important;
+    outline: none !important;
+}
+
+.rework-form-control::placeholder {
+    color: #adb5bd;
+}
+
+.rework-form-check {
+    margin-bottom: 14px;
+}
+
+.rework-form-check-input {
+    width: 20px;
+    height: 20px;
+    border: 2.5px solid #e9ecef;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: white;
+    position: relative;
+    margin-right: 0;
+}
+
+.rework-form-check-input:hover {
+    border-color: var(--rework-primary-color);
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.2);
+}
+
+.rework-form-check-input:checked {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.rework-form-check-label {
+    margin-left: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--rework-text-color);
+    font-weight: 500;
+    user-select: none;
+}
+
+.rework-form-check-label a {
+    color: var(--rework-primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.rework-form-check-label a:hover {
+    text-decoration: underline;
+    color: var(--rework-secondary-color);
+}
+
+.rework-shipping-form {
+    margin-top: 0;
+}
+
+.rework-error-message {
+    color: var(--rework-danger-color);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* ============ CART ITEMS ============ */
+.rework-cart-item {
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid var(--rework-border-color);
+}
+
+.rework-cart-item:last-child {
+    border-bottom: none;
+}
+
+.rework-cart-item:hover {
+    background-color: #f8f9fa;
+    padding: 20px 12px;
+    border-radius: 8px;
+}
+
+.rework-car-image-box {
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    color: #ddd;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.rework-cart-item:hover .rework-car-image-box {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.rework-car-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* ============ BADGES ============ */
+.rework-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.rework-badge-custom {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e9ecef 100%);
+    color: var(--rework-text-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    margin-right: 8px;
+}
+
+.rework-badge-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.rework-badge-light {
+    background-color: var(--rework-light-bg);
+    color: var(--rework-text-color);
+}
+
+/* ============ PAYMENT METHODS ============ */
+.rework-payment-methods {
+    margin-bottom: 24px;
+}
+
+.rework-payment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.rework-payment-option {
+    position: relative;
+}
+
+.rework-payment-option input[type="radio"] {
+    display: none;
+}
+
+.rework-payment-option label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background-color: white;
+    color: var(--rework-text-color);
+}
+
+.rework-payment-option label:hover {
+    border-color: var(--rework-primary-color);
+    background-color: #f8f9fa;
+}
+
+.rework-payment-option input[type="radio"]:checked + label {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+.rework-payment-option i {
+    font-size: 18px;
+}
+
+.rework-payment-form {
+    padding: 24px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #f0f2f5 100%);
+    border-radius: 10px;
+    margin-top: 16px;
+    border-left: 5px solid var(--rework-primary-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ============ SUMMARY ITEM ============ */
+.rework-summary-item {
+    font-size: 14px;
+    padding: 16px 0;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid var(--rework-border-color);
+}
+
+.rework-summary-item:hover {
+    padding-left: 8px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+}
+
+.rework-summary-item p {
+    margin: 0;
+}
+
+.rework-summary-item strong {
+    color: var(--rework-text-color);
+    font-weight: 800;
+}
+
+/* ============ PRICING BREAKDOWN ============ */
+.rework-pricing-breakdown {
+    font-size: 14px;
+    padding: 16px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #f0f2f5 100%);
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    margin-bottom: 12px;
+}
+
+.rework-pricing-breakdown .rework-row-items {
+    padding: 8px 0;
+    transition: all 0.3s ease;
+}
+
+.rework-pricing-breakdown .rework-row-items:hover {
+    padding-left: 6px;
+}
+
+.rework-pricing-breakdown .rework-col-item-8 {
+    color: var(--rework-text-muted);
+    font-weight: 600;
+}
+
+.rework-pricing-breakdown .rework-col-item-4 {
+    font-weight: 800;
+    color: var(--rework-primary-color);
+    text-align: right;
+}
+
+.rework-promo-row {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e9ecef;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 8px;
+}
+
+.rework-promo-row .rework-col-item-8 {
+    grid-column: span 8;
+}
+
+.rework-promo-row .rework-col-item-4 {
+    grid-column: span 4;
+}
+
+/* ============ TOTAL AMOUNT ============ */
+.rework-total-amount {
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    color: white;
+    margin-bottom: 16px;
+}
+
+.rework-total-amount .rework-row-items {
+    margin: 0;
+}
+
+.rework-total-amount .rework-col-item-8 {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+}
+
+.rework-total-amount .rework-col-item-4 {
+    color: white;
+    font-size: 22px;
+    font-weight: 900;
+    text-align: right;
+}
+
+/* ============ ALERTS ============ */
+.rework-alert {
+    padding: 12px 16px;
+    font-size: 13px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.rework-alert:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.rework-alert-success {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+    border-left: 4px solid #28a745;
+}
+
+.rework-alert-info {
+    background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+    color: #0c5460;
+    border-left: 4px solid #17a2b8;
+}
+
+/* ============ TRUST BADGES ============ */
+.rework-trust-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #f0f2f5 100%);
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    margin-bottom: 24px;
+}
+
+.rework-badge-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--rework-text-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.rework-badge-item:hover {
+    background-color: white;
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.rework-badge-item i {
+    font-size: 18px;
+    min-width: 24px;
+}
+
+/* ============ BUTTONS ============ */
+.rework-btn {
+    border-radius: 8px;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
+    letter-spacing: 0.4px;
+    position: relative;
+    overflow: hidden;
+    padding: 12px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.rework-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+    z-index: -1;
+}
+
+.rework-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.rework-btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+.rework-btn-primary:hover {
+    background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    color: white;
+}
+
+.rework-btn-outline {
+    border: 2.5px solid var(--rework-primary-color);
+    color: var(--rework-primary-color);
+    background-color: transparent;
+    font-weight: 700;
+}
+
+.rework-btn-outline:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.rework-btn-block {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.rework-btn-sm {
+    padding: 8px 14px;
+    font-size: 13px;
+}
+
+.rework-btn-lg {
+    padding: 14px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+/* ============ ICON COLOR UTILITIES ============ */
+.rework-icon-success {
+    color: var(--rework-success-color);
+}
+
+.rework-icon-info {
+    color: var(--rework-info-color);
+}
+
+.rework-icon-warning {
+    color: var(--rework-warning-color);
+}
+
+.rework-link-primary {
+    color: var(--rework-primary-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.rework-link-primary:hover {
+    text-decoration: underline;
+    color: var(--rework-secondary-color);
+}
+
+/* ============ STICKY POSITIONING ============ */
+.rework-sticky {
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+}
+
+/* ============ ANIMATIONS ============ */
+@keyframes rework-slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rework-fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rework-pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(102, 126, 234, 0);
+    }
+}
+
+.rework-checkout-card {
+    animation: rework-slideUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.rework-step.rework-step-active {
+    animation: rework-slideUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body.rework-checkout-page {
+    animation: rework-fadeIn 0.4s ease-in;
+}
+
+/* ============ CUSTOM SCROLLBAR ============ */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, #f8f9fa 0%, #f0f2f5 100%);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #5568d3 0%, #6a3f8f 100%);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 992px) {
+    .rework-col-lg-8 { grid-column: span 12; }
+    .rework-col-lg-4 { grid-column: span 12; }
+    
+    .rework-checkout-summary {
+        margin-top: 30px;
+        position: relative !important;
+    }
+    
+    .rework-sticky {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .rework-main-container {
+        padding: 24px 12px;
+    }
+    
+    .rework-row-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .rework-row-items {
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    .rework-col-item-3 { grid-column: span 6; }
+    .rework-col-item-4 { grid-column: span 12; }
+    .rework-col-item-6 { grid-column: span 12; }
+    .rework-col-item-8 { grid-column: span 12; }
+    
+    .rework-form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .rework-form-group-col-6,
+    .rework-form-group-col-3 {
+        grid-column: span 1;
+    }
+    
+    .rework-payment-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .rework-checkout-steps {
+        flex-direction: column;
+        gap: 15px;
+        padding: 30px 20px;
+    }
+    
+    .rework-step-line {
+        width: 3px;
+        height: 40px;
+        margin: 10px 0;
+    }
+    
+    .rework-cart-item {
+        padding: 16px 0;
+    }
+    
+    .rework-cart-item .rework-row-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .rework-text-right {
+        text-align: left;
+    }
+    
+    .rework-badge-item {
+        justify-content: flex-start;
+    }
+    
+    .rework-total-amount {
+        margin-top: 20px;
+    }
+    
+    .rework-btn-block {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .rework-step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    .rework-step-label {
+        font-size: 12px;
+    }
+    
+    .rework-btn-lg {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .rework-checkout-card {
+        margin-bottom: 16px;
+    }
+    
+    .rework-form-label {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    
+    .rework-promo-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .rework-promo-row .rework-col-item-8,
+    .rework-promo-row .rework-col-item-4 {
+        grid-column: span 1;
+    }
+}
+
+/* ============ PRINT STYLES ============ */
+@media print {
+    .navbar,
+    footer,
+    .rework-btn {
+        display: none;
+    }
+
+    .rework-checkout-summary {
+        position: static !important;
+    }
+}

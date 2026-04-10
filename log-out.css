@@ -1,0 +1,227 @@
+* {
+    cursor: url('icon/18cursor.png'), auto;
+}
+
+/* Top confirmation */
+.confirm {
+    text-align: center;
+    padding: 50px 24px 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.confirm h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.confirm p {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 24px;
+}
+
+.confirm-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn {
+    padding: 10px 28px;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-outline {
+    background: #fff;
+    border: 1px solid #000;
+}
+
+.btn-outline:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background: #000;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Profile bar */
+.profile-bar {
+    background: #283871;
+    color: #fff;
+    padding: 22px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.profile-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.avatar {
+    width: 54px;
+    height: 54px;
+    background: #bdbdbd;
+    border-radius: 50%;
+}
+
+.profile-info h3 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.tags {
+    font-size: 11px;
+    margin: 4px 0;
+}
+
+.tag {
+    background: #8c8c8c;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.session {
+    font-size: 11px;
+    color: #e0e0e0;
+}
+
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-actions button {
+    padding: 6px 14px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-gray {
+    background: transparent;
+    border: 1px solid #dcdcdc;
+    color: #fff;
+}
+
+.btn-black {
+    background: #7c90d6;
+    border: none;
+    color: #fff;
+}
+
+/* Message card */
+.message {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #efefef;
+    padding: 60px 24px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Session ended */
+.session-ended {
+    max-width: 1100px;
+    margin: 60px auto 40px;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.ended h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.ended p {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.ended-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.help-card {
+    border: 1px solid #e5e5e5;
+    padding: 16px;
+    border-radius: 6px;
+    display: flex;
+    gap: 14px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.help-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.help-icon {
+    width: 40px;
+    height: 40px;
+    background: #eaeaea;
+    border-radius: 4px;
+}
+
+.help-card h4 {
+    margin: 0 0 4px;
+    font-size: 14px;
+}
+
+.help-card p {
+    margin: 0;
+    font-size: 12px;
+    color: #555;
+}
+
+.link-contact {
+    text-decoration: none;
+    color: #000000;
+}
+
+.link-login {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .session-ended {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .profile-bar {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+}

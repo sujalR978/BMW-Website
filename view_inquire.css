@@ -1,0 +1,521 @@
+/* ============================================
+   VIEW INQUIRIES PAGE - CUSTOM STYLES
+   BMW Luxury Theme - White & Black
+   ============================================ */
+
+:root {
+    --color-white-bg: #FFFFFF;
+    --color-light-gray: #F5F5F5;
+    --color-light-gray-2: #EEEEEE;
+    --color-bmw-blue: #0066B1;
+    --color-electric-blue: #1C69D4;
+    --color-sky-blue: #00A8E8;
+    --color-black: #000000;
+    --color-dark-text: #1A1A1A;
+    --color-medium-gray: #666666;
+    --color-success: #4CAF50;
+    --color-warning: #FF9800;
+    --color-danger: #D32F2F;
+}
+
+body {
+    background-color: var(--color-white-bg);
+    color: var(--color-black);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============================================
+   MAIN CONTAINER
+   ============================================ */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+/* ============================================
+   INFO SECTION (LEFT SIDEBAR)
+   ============================================ */
+
+.info-section {
+    background: linear-gradient(135deg, var(--color-white-bg) 0%, var(--color-light-gray-2) 100%);
+    border: 1px solid rgba(28, 105, 212, 0.2);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+}
+
+.info-section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(28, 105, 212, 0.2);
+}
+
+.info-item {
+    margin-bottom: 30px;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-item h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-electric-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 10px 0;
+}
+
+.info-item p {
+    color: var(--color-dark-text);
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ============================================
+   INQUIRY SECTION (RIGHT FORM)
+   ============================================ */
+
+.inquiry-section {
+    background: white;
+    border: 1px solid rgba(28, 105, 212, 0.2);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin: 0 0 15px 0;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: var(--color-medium-gray);
+    margin: 0 0 40px 0;
+    line-height: 1.6;
+}
+
+/* ============================================
+   INQUIRY FORM STYLES
+   ============================================ */
+
+.inquiry-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-black);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 14px 16px;
+    border: 1px solid rgba(28, 105, 212, 0.3);
+    border-radius: 8px;
+    background-color: white;
+    color: var(--color-black);
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--color-medium-gray);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border: 1px solid var(--color-electric-blue);
+    box-shadow: 0 0 15px rgba(28, 105, 212, 0.3);
+    background-color: rgba(28, 105, 212, 0.05);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-group small {
+    font-size: 12px;
+    color: var(--color-medium-gray);
+    font-weight: 400;
+}
+
+/* ============================================
+   SUBMIT BUTTON
+   ============================================ */
+
+.submit-btn {
+    padding: 16px 32px;
+    background: linear-gradient(135deg, var(--color-electric-blue), var(--color-bmw-blue));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 20px rgba(28, 105, 212, 0.3);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(28, 105, 212, 0.5);
+    background: linear-gradient(135deg, var(--color-sky-blue), var(--color-electric-blue));
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet View: 1024px and below */
+@media screen and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+        gap: 30px;
+    }
+
+    .info-section {
+        padding: 30px;
+    }
+
+    .inquiry-section {
+        padding: 30px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+/* Mobile View: 768px and below */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .info-section {
+        padding: 25px;
+        order: 2;
+    }
+
+    .inquiry-section {
+        padding: 25px;
+        order: 1;
+    }
+
+    .info-section h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .info-item {
+        margin-bottom: 20px;
+    }
+
+    .info-item h3 {
+        font-size: 12px;
+    }
+
+    .info-item p {
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .inquiry-form {
+        gap: 20px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+    }
+
+    .submit-btn {
+        padding: 14px 24px;
+        font-size: 13px;
+    }
+}
+
+/* Small Mobile: 480px and below */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    .info-section {
+        padding: 20px;
+    }
+
+    .inquiry-section {
+        padding: 20px;
+    }
+
+    .info-section h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .info-item {
+        margin-bottom: 15px;
+    }
+
+    .info-item h3 {
+        font-size: 11px;
+    }
+
+    .info-item p {
+        font-size: 13px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+
+    .inquiry-form {
+        gap: 15px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .form-group textarea {
+        min-height: 100px;
+    }
+
+    .submit-btn {
+        padding: 12px 20px;
+        font-size: 12px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .filter-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .inquiries-table {
+        font-size: 13px;
+    }
+
+    .inquiries-table thead th,
+    .inquiries-table tbody td {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn-outline,
+    .btn-primary {
+        width: 100%;
+    }
+
+    .filter-section {
+        padding: 30px 20px;
+    }
+
+    .filter-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .inquiries-section {
+        padding: 40px 20px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    .inquiries-table {
+        font-size: 12px;
+    }
+
+    .inquiries-table thead th,
+    .inquiries-table tbody td {
+        padding: 10px 8px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .btn-action {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 30px 15px;
+        gap: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .tags {
+        justify-content: center;
+    }
+
+    .filter-section {
+        padding: 20px 15px;
+    }
+
+    .filter-container {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .inquiries-section {
+        padding: 30px 15px;
+    }
+
+    .inquiries-section h2 {
+        font-size: 24px;
+    }
+
+    .inquiries-table {
+        font-size: 11px;
+    }
+
+    .inquiries-table thead th,
+    .inquiries-table tbody td {
+        padding: 8px 6px;
+    }
+
+    .pagination {
+        gap: 5px;
+    }
+
+    .pagination a,
+    .pagination span {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .empty-state {
+        padding: 50px 20px;
+    }
+
+    .empty-state-icon {
+        font-size: 48px;
+    }
+
+    .empty-state h3 {
+        font-size: 20px;
+    }
+}

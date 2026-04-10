@@ -1,0 +1,287 @@
+/* ============================================
+   DARK THEME - COMMON VARIABLES & BASE STYLES
+   BMW Luxury Dark Mode
+   ============================================ */
+
+:root {
+    /* Dark Theme Colors */
+    --dark-bg-primary: #0f0f0f;
+    --dark-bg-secondary: #1a1a1a;
+    --dark-bg-tertiary: #252525;
+    --dark-text-primary: #ffffff;
+    --dark-text-secondary: #b0b0b0;
+    --dark-text-muted: #808080;
+    
+    /* Dark Theme Accent Colors */
+    --dark-accent-primary: #64b5f6;
+    --dark-accent-secondary: #42a5f5;
+    --dark-accent-tertiary: #2196f3;
+    --dark-brand-green: #4db8a8;
+    --dark-brand-accent: #1e88e5;
+    
+    /* Dark Theme borders */
+    --dark-border-color: #333333;
+    --dark-border-light: #404040;
+    
+    /* Original Light Theme Colors for reference */
+    --primary: #1C69D4;
+    --secondary: #0066B1;
+    --accent: #0277bd;
+}
+
+/* ============================================
+   DARK THEME - FULL PAGE BACKGROUND
+   ============================================ */
+
+body.dark-theme {
+    background: var(--dark-bg-primary) !important;
+    color: var(--dark-text-primary) !important;
+}
+
+/* ============================================
+   DARK THEME - SCROLLBAR
+   ============================================ */
+
+body.dark-theme::-webkit-scrollbar {
+    width: 10px;
+}
+
+body.dark-theme::-webkit-scrollbar-track {
+    background: var(--dark-bg-secondary);
+}
+
+body.dark-theme::-webkit-scrollbar-thumb {
+    background: var(--dark-brand-green);
+    border-radius: 5px;
+}
+
+body.dark-theme::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-accent-primary);
+}
+
+/* ============================================
+   DARK THEME - INPUT & FORM ELEMENTS
+   ============================================ */
+
+.dark-theme input,
+.dark-theme textarea,
+.dark-theme select {
+    background: var(--dark-bg-tertiary) !important;
+    color: var(--dark-text-primary) !important;
+    border: 1px solid var(--dark-border-light) !important;
+}
+
+.dark-theme input:focus,
+.dark-theme textarea:focus,
+.dark-theme select:focus {
+    border-color: var(--dark-brand-green) !important;
+    box-shadow: 0 0 8px rgba(77, 184, 168, 0.3) !important;
+}
+
+.dark-theme button {
+    background: var(--dark-brand-green) !important;
+    color: var(--dark-bg-primary) !important;
+    border: 1px solid var(--dark-brand-green) !important;
+}
+
+.dark-theme button:hover {
+    background: var(--dark-accent-primary) !important;
+    border-color: var(--dark-accent-primary) !important;
+}
+
+/* ============================================
+   DARK THEME - CARDS & CONTAINERS
+   ============================================ */
+
+.dark-theme .card,
+.dark-theme [class*="card"],
+.dark-theme [class*="container"] {
+    background: var(--dark-bg-secondary) !important;
+    color: var(--dark-text-primary) !important;
+    border: 1px solid var(--dark-border-light) !important;
+}
+
+.dark-theme .card:hover,
+.dark-theme [class*="card"]:hover {
+    background: var(--dark-bg-tertiary) !important;
+    border-color: var(--dark-brand-green) !important;
+}
+
+/* ============================================
+   DARK THEME - SECTIONS
+   ============================================ */
+
+.dark-theme section {
+    background: var(--dark-bg-secondary) !important;
+    color: var(--dark-text-primary) !important;
+}
+
+.dark-theme section:hover {
+    background: var(--dark-bg-tertiary) !important;
+}
+
+/* ============================================
+   DARK THEME - HEADINGS
+   ============================================ */
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6 {
+    color: var(--dark-text-primary) !important;
+}
+
+/* ============================================
+   DARK THEME - LINKS
+   ============================================ */
+
+.dark-theme a {
+    color: var(--dark-accent-primary) !important;
+}
+
+.dark-theme a:hover {
+    color: var(--dark-brand-green) !important;
+}
+
+/* ============================================
+   DARK THEME - LISTS
+   ============================================ */
+
+.dark-theme ul,
+.dark-theme ol,
+.dark-theme li {
+    color: var(--dark-text-primary) !important;
+}
+
+/* ============================================
+   DARK THEME - IMAGES (with slight overlay)
+   ============================================ */
+
+.dark-theme img {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.dark-theme img:hover {
+    opacity: 1;
+}
+
+/* ============================================
+   DARK THEME - DIVIDER & HR
+   ============================================ */
+
+.dark-theme hr,
+.dark-theme [class*="divider"] {
+    border-color: var(--dark-border-light) !important;
+}
+
+/* ============================================
+   DARK THEME - BADGES & LABELS
+   ============================================ */
+
+.dark-theme .badge,
+.dark-theme [class*="badge"],
+.dark-theme [class*="label"] {
+    background: var(--dark-brand-green) !important;
+    color: var(--dark-bg-primary) !important;
+}
+
+/* ============================================
+   DARK THEME TOGGLE BUTTON
+   ============================================ */
+
+.theme-toggle-btn {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    background: var(--dark-brand-green) !important;
+    color: white !important;
+    border: none !important;
+    cursor: pointer !important;
+    font-size: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 15px rgba(77, 184, 168, 0.4) !important;
+    transition: all 0.3s ease !important;
+    z-index: 9999 !important;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 20px rgba(77, 184, 168, 0.6) !important;
+}
+
+.theme-toggle-btn.dark-mode {
+    background: #ffb300 !important;
+    box-shadow: 0 4px 15px rgba(255, 179, 0, 0.4) !important;
+}
+
+.theme-toggle-btn.dark-mode:hover {
+    box-shadow: 0 6px 20px rgba(255, 179, 0, 0.6) !important;
+}
+
+/* Footer Theme Toggle Button */
+.footer-theme-toggle-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 20px !important;
+    margin-top: 20px !important;
+    border-top: 2px solid rgba(144, 171, 139, 0.2) !important;
+}
+
+.footer-theme-toggle-btn {
+    background: linear-gradient(135deg, #90AB8B 0%, #215E61 100%) !important;
+    color: white !important;
+    border: 2px solid #90AB8B !important;
+    padding: 12px 24px !important;
+    border-radius: 25px !important;
+    cursor: pointer !important;
+    font-size: 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 15px rgba(33, 94, 97, 0.3) !important;
+}
+
+.footer-theme-toggle-btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(33, 94, 97, 0.5) !important;
+    background: linear-gradient(135deg, #215E61 0%, #90AB8B 100%) !important;
+}
+
+.footer-theme-toggle-btn:active {
+    transform: translateY(-1px) !important;
+}
+
+.footer-theme-toggle-btn .theme-icon {
+    font-size: 20px !important;
+    display: inline-block !important;
+    transition: transform 0.3s ease !important;
+}
+
+.footer-theme-toggle-btn:hover .theme-icon {
+    transform: rotate(20deg) scale(1.1) !important;
+}
+
+/* Dark Theme Footer Toggle Button */
+.dark-theme .footer-theme-toggle-btn {
+    background: linear-gradient(135deg, #4db8a8 0%, #64b5f6 100%) !important;
+    color: var(--dark-bg-primary) !important;
+    border: 2px solid #4db8a8 !important;
+    box-shadow: 0 4px 15px rgba(77, 184, 168, 0.4) !important;
+}
+
+.dark-theme .footer-theme-toggle-btn:hover {
+    box-shadow: 0 8px 25px rgba(77, 184, 168, 0.6) !important;
+    background: linear-gradient(135deg, #64b5f6 0%, #4db8a8 100%) !important;
+}

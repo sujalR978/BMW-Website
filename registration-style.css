@@ -1,0 +1,180 @@
+ * {
+     cursor: url('icon/18cursor.png'), auto;
+ }
+
+ .container {
+     max-width: 1000px;
+     margin: 0 auto;
+     padding: 40px 20px;
+
+ }
+
+
+ /* Hero Section */
+ .hero {
+     text-align: center;
+     padding: 60px 20px;
+ }
+
+ .hero h1 {
+     font-size: 32px;
+     margin-bottom: 15px;
+ }
+
+ .hero p {
+     color: #666;
+     max-width: 500px;
+     margin: 0 auto 25px;
+     font-size: 14px;
+     line-height: 1.5;
+ }
+
+ /* Form Styles */
+ .registration-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 50px;
+     padding: 80px 20px;
+ }
+
+ .reg-form {
+     width: 100%;
+ }
+
+ .form-group {
+     margin-bottom: 20px;
+ }
+
+ .form-group label {
+     display: block;
+     font-size: 12px;
+     font-weight: bold;
+     margin-bottom: 5px;
+ }
+
+ .form-group input {
+     width: 100%;
+     padding: 10px;
+     border: 1px solid #e0e0e0;
+     border-radius: 4px;
+     font-size: 14px;
+ }
+
+ .form-group input:hover {
+     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+ }
+
+ .form-group small {
+     display: block;
+     color: #999;
+     font-size: 11px;
+     margin-top: 5px;
+ }
+
+ .form-buttons {
+     display: flex;
+     gap: 10px;
+     margin-top: 30px;
+ }
+
+ /* Feature Section */
+ .features-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 50px;
+     padding: 80px 20px;
+ }
+
+ .feature-cards {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+ }
+
+ .card {
+     display: flex;
+     align-items: center;
+     padding: 20px;
+     border: 1px solid #f0f0f0;
+     border-radius: 4px;
+     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+ }
+
+ .card:hover {
+     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+ }
+
+ .square-img {
+     width: 60px;
+     height: 60px;
+     background-color: #eee;
+     margin-right: 20px;
+     flex-shrink: 0;
+ }
+
+ .card h3 {
+     font-size: 16px;
+     margin-bottom: 5px;
+ }
+
+ .card p {
+     font-size: 13px;
+     color: #666;
+ }
+
+ /* Buttons & Dividers */
+ .btn-dark {
+     background-color: #000;
+     color: #fff;
+     padding: 12px 30px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     font-weight: bold;
+     width: auto;
+ }
+
+ .btn-outline {
+     background-color: #fff;
+     color: #000;
+     border: 1px solid #000;
+     padding: 12px 30px;
+     border-radius: 4px;
+     cursor: pointer;
+     flex: 1;
+ }
+
+ .reg-form .btn-dark {
+     flex: 1;
+ }
+
+ .divider {
+     border: 0;
+     border-top: 1px solid #f5f5f5;
+     margin: 0;
+ }
+
+ footer {
+     background-color: #1a1a1a;
+     padding: 60px 20px;
+     text-align: center;
+ }
+
+ .footer-links a {
+     color: #fff;
+     text-decoration: none;
+     margin: 0 15px;
+     font-size: 14px;
+ }
+
+ .reg-text {
+     margin-top: 50%;
+ }
+
+ .feature-title {
+     margin-top: 35%;
+ }
+
+ .error {
+     color: red;
+ }

@@ -1,0 +1,754 @@
+/* ============================================
+   PAGE - CUSTOM STYLES
+   All base styling handled by luxury_theme.css
+   Add page-specific styles only below if needed
+   ============================================ */
+.Mtext-1 {
+    font-size: 50px;
+    font-weight: lighter;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 40px;
+    margin-top: 80px;
+}
+.MtextSmal-1 {
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+.model-nav {
+    display: flex;
+    gap: 50px;
+    padding-bottom: 0px;
+    margin-left: 60px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.border {
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    padding: 0px;
+    margin: 10px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #666;
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-item:hover {
+    font-weight: bold;
+    color: #000;
+    border-bottom: 3px solid #000000;
+}
+
+.content {
+    font-size: 24px;
+    font-weight: 300;
+    margin-left: 14px;
+}
+.Model-1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 25px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 0;
+    justify-content: center;
+}
+
+.model-item {
+    width: calc(25% - 25px);
+    border-radius: 18px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 40px rgba(28, 105, 212, 0.12), 0 0 0 1px rgba(28, 105, 212, 0.08);
+    background: white;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.model-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(28, 105, 212, 0.08) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    border-radius: 18px;
+    z-index: 1;
+}
+
+.model-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease, height 0.5s ease;
+    z-index: 2;
+}
+
+.model-item:hover::before {
+    opacity: 1;
+}
+
+.model-item:hover::after {
+    opacity: 1;
+    height: 6px;
+}
+
+.model-item:hover {
+    box-shadow: 0 30px 80px rgba(28, 105, 212, 0.25), 0 0 60px rgba(102, 126, 234, 0.15);
+    transform: translateY(-18px);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.model-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.model-item:hover .model-image {
+    transform: scale(1.12) rotate(0.5deg);
+    filter: brightness(1.08) saturate(1.15);
+}
+
+.bmw-title {
+    font-size: 20px;
+    color: #1a1a1a;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 18px 18px 8px 18px;
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.model-item:hover .bmw-title {
+    color: #667eea;
+}
+
+.bmw-type {
+    font-size: 12px;
+    color: #999;
+    margin: 0;
+    padding: 0 18px 10px 18px;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+}
+
+.model-item:hover .bmw-type {
+    color: #667eea;
+}
+
+.bmw-price {
+    font-size: 24px;
+    color: #1a1a1a;
+    font-weight: 800;
+    margin: 0;
+    padding: 12px 18px 18px 18px;
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.model-item:hover .bmw-price {
+    color: #667eea;
+    text-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+/* Car Action Buttons */
+.car-actions {
+    display: flex;
+    gap: 10px;
+    padding: 16px 18px;
+    margin-top: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-wishlist {
+    background: linear-gradient(135deg, #ffe0e0 0%, #ffd0d0 100%);
+    color: white;
+    border: 2px solid rgba(211, 47, 47, 0.2);
+}
+
+.btn-wishlist:hover {
+    background: linear-gradient(135deg, #ffb3b3 0%, #ffa0a0 100%);
+    box-shadow: 0 8px 24px rgba(211, 47, 47, 0.25);
+    transform: translateY(-3px);
+    border-color: rgba(211, 47, 47, 0.4);
+}
+
+.btn-wishlist:active {
+    transform: translateY(-1px);
+}
+
+.btn-cart {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: 2px solid transparent;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
+}
+
+.btn-cart:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    box-shadow: 0 12px 36px rgba(102, 126, 234, 0.35);
+    transform: translateY(-3px);
+}
+
+.btn-cart:active {
+    transform: translateY(-1px);
+}
+
+.border-1 {
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    padding: 0px;
+    margin: 30px;
+}
+/* 
+.bmw-footer {
+    background-color: #fff;
+    padding: 40px 60px;
+    border-top: 1px solid #ddd;
+    color: #222;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.bmw-logo {
+    width: 50px;
+    height: auto;
+} */
+
+
+/* Responsive styles for Model page */
+@media (max-width: 1024px) {
+    .Mtext-1 {
+        font-size: 36px;
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+    .MtextSmal-1 {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    .model-nav {
+        gap: 25px;
+        margin-left: 20px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .Model-1 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .model-item {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+    .footer-columns {
+        gap: 20px;
+    }
+    .footer-column {
+        margin-right: 40px;
+        min-width: 160px;
+    }
+    .fot, .dd1 {
+        margin-left: 0;
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .Mtext-1 {
+        font-size: 28px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+    .MtextSmal-1 {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    .model-nav {
+        gap: 15px;
+        margin-left: 10px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-item {
+        font-size: 15px;
+        padding-bottom: 2px;
+    }
+    .content {
+        font-size: 18px;
+        margin-left: 8px;
+    }
+    .Model-1 {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .model-item {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .model-image {
+        width: 100%;
+    }
+    .footer-columns {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-column {
+        margin-right: 0;
+        min-width: 120px;
+    }
+    .fot, .dd1 {
+        margin-left: 0;
+        font-size: 14px;
+        text-align: center;
+    }
+    .png {
+        width: 24px;
+        height: 24px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Mtext-1 {
+        font-size: 18px;
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+    .MtextSmal-1 {
+        font-size: 10px;
+        margin-left: 5px;
+    }
+    .model-nav {
+        gap: 8px;
+        margin-left: 2px;
+        margin-top: 8px;
+        margin-bottom: 5px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-item {
+        font-size: 12px;
+        padding-bottom: 1px;
+    }
+    .content {
+        font-size: 12px;
+        margin-left: 2px;
+    }
+    .Model-1 {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .model-item {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .model-image {
+        width: 100%;
+    }
+    .bmw-title, .bmw-type, .bmw-price {
+        margin-left: 8px;
+        font-size: 10px;
+        padding-top: 10px;
+    }
+    .footer-columns {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .footer-column {
+        margin-right: 0;
+        min-width: 80px;
+    }
+    .footer-column h3 {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    .footer-column a {
+        font-size: 10px;
+    }
+    .fot, .dd1 {
+        margin-left: 0;
+        font-size: 10px;
+        text-align: center;
+    }
+    .png {
+        width: 16px;
+        height: 16px;
+        padding-left: 4px;
+    }
+}
+
+/* ============ SEARCH BAR STYLES ============ */
+.model-search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 60px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 40px auto;
+    flex-wrap: wrap;
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+    position: relative;
+    overflow: hidden;
+    max-width: 1400px;
+    border-radius: 20px;
+}
+
+.model-search-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    animation: shimmer 4s infinite;
+    z-index: 1;
+}
+
+.model-search-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Filter Label/Title */
+.model-search-container > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Enhanced Search Input */
+#search {
+    flex: 1;
+    min-width: 250px;
+    max-width: 420px;
+    padding: 16px 24px;
+    border: 3px solid transparent;
+    border-radius: 60px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: white;
+    color: #333;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.18);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    outline: none;
+}
+
+#search:hover {
+    box-shadow: 0 15px 48px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px) scale(1.03);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+#search:focus {
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.35);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-4px) scale(1.03);
+    background: linear-gradient(135deg, #fff 0%, #f8faff 100%);
+}
+
+#search::placeholder {
+    color: #999;
+    font-weight: 500;
+}
+
+/* Enhanced Filter Selects */
+#modelFilter,
+#fuelFilter,
+#priceFilter {
+    padding: 16px 20px;
+    border: 3px solid transparent;
+    border-radius: 60px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.18);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    outline: none;
+    min-width: 160px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath fill='%23667eea' d='M7 10L1 5h12z' stroke='%23667eea' stroke-width='0.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-color: white;
+    padding-right: 45px;
+}
+
+#modelFilter:hover,
+#fuelFilter:hover,
+#priceFilter:hover {
+    box-shadow: 0 15px 48px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px) scale(1.03);
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+#modelFilter:focus,
+#fuelFilter:focus,
+#priceFilter:focus {
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.35);
+    border-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-4px) scale(1.03);
+    background: linear-gradient(135deg, #fff 0%, #f8faff 100%);
+}
+
+#modelFilter option,
+#fuelFilter option,
+#priceFilter option {
+    background: white;
+    color: #333;
+    padding: 12px;
+    font-weight: 500;
+    border: none;
+    background-color: white;
+}
+
+#modelFilter option:checked,
+#fuelFilter option:checked,
+#priceFilter option:checked {
+    background: linear-gradient(#667eea, #667eea);
+    background-color: #667eea;
+    color: white;
+}
+
+#modelFilter:focus,
+#fuelFilter:focus,
+#priceFilter:focus {
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-3px) scale(1.02);
+}
+
+#modelFilter option,
+#fuelFilter option,
+#priceFilter option {
+    background: white;
+    color: #333;
+    padding: 10px;
+    font-weight: 500;
+}
+
+/* Search Icon (before) */
+.search-bar::before {
+    content: '🔍';
+    font-size: 18px;
+    color: #667eea;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus-within::before {
+    opacity: 1;
+    color: #764ba2;
+}
+
+/* Clear Button */
+#clearSearch {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    background: linear-gradient(135deg, #f8f9fa 0%, #f0f2f5 100%);
+    color: #667eea;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+#clearSearch:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    transform: scale(1.05) rotate(90deg);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+#clearSearch:active {
+    transform: scale(0.95) rotate(90deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .model-search-container {
+        padding: 40px 20px;
+        margin: 30px 15px;
+        gap: 12px;
+        border-radius: 16px;
+    }
+
+    #search {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+
+    #modelFilter,
+    #fuelFilter,
+    #priceFilter {
+        padding: 14px 16px;
+        min-width: 140px;
+        font-size: 13px;
+        background-position: right 14px center;
+        padding-right: 38px;
+    }
+}
+
+@media (max-width: 576px) {
+    .model-search-container {
+        padding: 30px 12px;
+        margin: 20px 8px;
+        gap: 10px;
+        flex-direction: column;
+        border-radius: 14px;
+    }
+
+    #search {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    #modelFilter,
+    #fuelFilter,
+    #priceFilter {
+        width: 100%;
+        padding: 12px 14px;
+        min-width: unset;
+        font-size: 12px;
+        background-position: right 12px center;
+        padding-right: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Mtext-1 {
+        font-size: 32px;
+        margin-left: 20px;
+    }
+
+    .MtextSmal-1 {
+        margin-left: 20px;
+    }
+}
+/* wishlist  */
+
+/* ============================================
+   WISHLIST BUTTON STYLES
+   ============================================ */
+
+/* ============================================
+   WISHLIST BUTTON
+   ============================================ */
+
